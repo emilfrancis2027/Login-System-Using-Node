@@ -1,0 +1,17 @@
+doctype html
+html(lang='en')
+  head
+    title Welcome
+  body
+center
+  p
+    a(href='/users/login') Login
+    |  
+    a(href='/users/register') Signup
+    |  
+    a(href='/users/logout') Logout
+
+  != messages()
+  block content
+     
+   

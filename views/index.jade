@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 WELCOME TO ABC.COM
+  if user
+    h2 Welcome to the members area #{user.username} ( Email-id:#{user.email} ) .You created your account on #{user.time} !
+  if !user
+    h2 Welcome,please Login or SignUp

@@ -1,0 +1,24 @@
+extends layout
+
+block content
+ h2 SIGN UP
+ p PLEASE ENTER DETAILS
+ form(method='post', action='/users/register')
+   label Username
+   input.form-control(name='username', type='text', placeholder='Enter Username')
+   br
+   br
+   label Email
+   input.form-control(name='email', type='email', placeholder='Enter Email')
+   br
+   br
+  
+   label Password
+   input.form-control(name='password', type='password', placeholder='Enter Password')
+   br
+   br
+   input(type='submit', name='submit',value='Register')
+ if errors
+  each error,i in errors
+   label #{error.msg};
+   br
